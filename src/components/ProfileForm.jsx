@@ -1,4 +1,3 @@
-// src/components/ProfileForm.jsx
 import React, { useState } from 'react';
 
 const ProfileForm = ({ onAddProfile }) => {

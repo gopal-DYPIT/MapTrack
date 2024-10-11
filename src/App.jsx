@@ -1,16 +1,13 @@
-// src/App.jsx
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import LoginForm from "./pages/LoginForm";
 import SignUpForm from "./pages/SignUpForm";
 import Home from "./pages/Home";
 import Landing from "./pages/Landing";
-import Team from "./pages/Team";
 
 function App() {
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [profiles, setProfiles] = useState(() => {
-    // Load profiles from local storage if available
     const savedProfiles = localStorage.getItem("profiles");
     return savedProfiles ? JSON.parse(savedProfiles) : [];
   });
@@ -49,7 +46,6 @@ function App() {
         path="/user" 
         element={<Home onAddProfile={handleAddProfile} profiles={profiles} onDeleteProfile={handleDeleteProfile} onShowMap={handleShowMap}/>} 
       />
-      {/* <Route path="/team" element={<Team />} /> */}
     </Routes>
   );
 }

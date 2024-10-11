@@ -1,4 +1,3 @@
-// src/Landing.jsx
 import React, { useState } from "react";
 import ProfileCard from "../components/ProfileCard";
 import MapView from "../components/MapView";
@@ -25,8 +24,6 @@ const Landing = ({ profiles }) => {
             />
           ))}
         </div>
-
-        {/* Map section */}
         {selectedAddress && (
           <div className="flex justify-center mt-8">
             <div className="w-full md:w-1/2 lg:w-1/3">

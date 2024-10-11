@@ -1,4 +1,3 @@
-// src/components/ProfileCard.jsx
 import React from 'react';
 
 const ProfileCard = ({ profile, onShowMap }) => {

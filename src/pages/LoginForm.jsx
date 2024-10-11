@@ -52,15 +52,14 @@ const LoginForm = () => {
         className="min-h-screen bg-cover bg-center flex flex-col items-center justify-start"
         // style={{ backgroundImage: "url(BG1.jpg)" }}
       >
-        {/* <h1 className="text-4xl  text-white font-bold mt-8 mb-8 ml-2">Sign Up</h1> */}
-        <h1 className="text-4xl text-white font-primaryRegular mt-8 mb-8 font-bold flex items-center  justify-center">
+        <h1 className="text-4xl text-white font-primaryRegular mt-8 mb-8 font-bold flex items-center justify-center">
           MyprofileApp
         </h1>
-        <div className="w-96 bg-white bg-opacity-50 rounded-md p-8">
+        <div className="w-full max-w-md bg-white bg-opacity-50 rounded-md p-8 sm:w-96">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label
-                className="block text-white  font-normal text-lg  font-bold mb-2"
+                className="block text-white font-normal text-lg font-bold mb-2"
                 htmlFor="email"
               >
                 Email
@@ -101,7 +100,7 @@ const LoginForm = () => {
             <span>
               <p className="text-gray-700 text-center mt-4">Or</p>
             </span>
-            <div className="align-middle justify-center ml-14 mt-4">
+            <div className="align-middle justify-center flex mt-4">
               <button
                 onClick={handleGoogleSignup}
                 type="button"
@@ -120,7 +119,7 @@ const LoginForm = () => {
             <div className="mt-4">
               <p className="text-center">Not a user?</p>
               <Link to="/signup">
-                <button className=" ml-28 bg-white hover:bg-gray-300 text-sm font-semibold py-2 px-4 mt-4  rounded focus:outline-none focus:shadow-outline">
+                <button className="w-full bg-white hover:bg-gray-300 text-sm font-semibold py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline">
                   Register
                 </button>
               </Link>

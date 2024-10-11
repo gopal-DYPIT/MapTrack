@@ -76,7 +76,7 @@ const SignupForm = () => {
         <h1 className="text-4xl text-white font-primaryRegular mt-8 mb-8 font-bold flex items-center justify-center">
           MyProfileApp
         </h1>
-        <div className="w-96 bg-white bg-opacity-50 rounded-md p-8">
+        <div className="w-full max-w-md bg-white bg-opacity-50 rounded-md p-8 sm:w-96">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label
@@ -163,9 +163,9 @@ const SignupForm = () => {
               />
             </div>
 
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between flex-col sm:flex-row">
               <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full sm:w-auto mb-2 sm:mb-0"
                 type="submit"
               >
                 Sign Up
@@ -173,7 +173,7 @@ const SignupForm = () => {
               <button
                 onClick={handleContinueToSignin}
                 type="button"
-                className="flex items-center justify-center bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-opacity-50 rounded-lg shadow-sm px-4 py-2"
+                className="flex items-center justify-center bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-opacity-50 rounded-lg shadow-sm px-4 py-2 w-full sm:w-auto"
               >
                 <span className="text-gray-700 font-medium">
                   Continue to Signin

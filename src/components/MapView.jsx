@@ -1,4 +1,3 @@
-// src/components/MapView.jsx
 import React, { useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -6,17 +5,16 @@ import 'leaflet/dist/leaflet.css';
 const MapView = ({ address }) => {
   const position = address ? address.position : [51.505, -0.09];
 
-  // Custom component to control map movement
   const MapViewController = () => {
     const map = useMap();
 
     useEffect(() => {
       if (address) {
-        map.setView(position, 13); // Adjust zoom level as needed
+        map.setView(position, 13); 
       }
     }, [address, map, position]);
 
-    return null; // This component does not render anything to the DOM
+    return null; 
   };
 
   return (
