@@ -14,6 +14,7 @@ const Landing = ({ profiles }) => {
     <>
       <HomeNavbar />
       <div className="container mx-auto p-4">
+        <h2 className="text-xl font-primaryRegular text-center mt-8 text-white mb-4">For Managing Profiles Login to Admin Panel through menu icon in Navbar ! </h2>
         <h2 className="text-2xl font-bold text-center mt-8 text-white mb-4">Profiles</h2>
         <div className="flex flex-wrap justify-center">
           {profiles.map((profile, index) => (
