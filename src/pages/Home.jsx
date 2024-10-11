@@ -17,7 +17,7 @@ const Home = ({ onAddProfile, profiles, onDeleteProfile }) => {
       <h1 className="text-3xl text-white font-bold text-center mb-4 pt-4 pb-4">Add a Profile</h1>
       <ProfileForm onAddProfile={onAddProfile} />
 
-      <h2 className="text-2xl text-white font-bold text-center mt-8 mb-4">Profiles</h2>
+      <h2 className="text-2xl text-white font-bold text-center mt-8 ">Profiles</h2>
       <div className="flex flex-wrap justify-center">
         {profiles.map((profile, index) => (
           <div key={index} className="relative m-2"> 

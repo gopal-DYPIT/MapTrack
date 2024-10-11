@@ -48,18 +48,21 @@ const LoginForm = () => {
   return (
     <>
       <HomeNavbar />
+
       <div
-        className="min-h-screen bg-cover bg-center flex flex-col items-center justify-start"
+        className="min-h-screen pt-8 bg-cover bg-center flex flex-col items-center justify-start"
         // style={{ backgroundImage: "url(BG1.jpg)" }}
       >
-        <h1 className="text-4xl text-white font-primaryRegular mt-8 mb-8 font-bold flex items-center justify-center">
+        
+
+        <h1 className="text-4xl text-white font-primaryRegular mt-4 mb-8 font-bold flex items-center justify-center">
           MyprofileApp
         </h1>
-        <div className="w-full max-w-md bg-white bg-opacity-50 rounded-md p-8 sm:w-96">
+        <div className="w-full max-w-md bg-white bg-opacity-50 rounded-md p-8 sm:w-96 shadow-lg">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label
-                className="block text-white font-normal text-lg font-bold mb-2"
+                className="block text-white font-bold mb-2"
                 htmlFor="email"
               >
                 Email
@@ -75,7 +78,7 @@ const LoginForm = () => {
             </div>
             <div className="mb-4">
               <label
-                className="block text-white font-normal text-lg font-bold mb-2"
+                className="block text-white font-bold mb-2"
                 htmlFor="password"
               >
                 Password
@@ -89,9 +92,9 @@ const LoginForm = () => {
                 onChange={handlePasswordChange}
               />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between mb-4">
               <button
-                className="bg-blue-500 w-full justify-center align-middle hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit"
               >
                 Sign In
@@ -100,7 +103,7 @@ const LoginForm = () => {
             <span>
               <p className="text-gray-700 text-center mt-4">Or</p>
             </span>
-            <div className="align-middle justify-center flex mt-4">
+            <div className="flex justify-center mt-4">
               <button
                 onClick={handleGoogleSignup}
                 type="button"
@@ -116,16 +119,27 @@ const LoginForm = () => {
                 </span>
               </button>
             </div>
-            <div className="mt-4">
-              <p className="text-center">Not a user?</p>
+            <div className="mt-4 text-center">
+              <p className="text-gray-700">Not a user?</p>
               <Link to="/signup">
-                <button className="w-full bg-white hover:bg-gray-300 text-sm font-semibold py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline">
+                <button className="w-full bg-white hover:bg-gray-300 text-sm font-semibold py-2 px-4 mt-2 rounded focus:outline-none focus:shadow-outline">
                   Register
                 </button>
               </Link>
             </div>
           </form>
         </div>
+        <h2 className="text-white mt-4 bg-gray-800 p-6 rounded-lg shadow-md mb-6">
+          <span className="block text-lg font-semibold mb-2">
+            Dummy Login Credentials:
+          </span>
+          <span className="block">
+            <span className="font-semibold">Email:</span> dummy123@gmail.com
+          </span>
+          <span className="block">
+            <span className="font-semibold">Password:</span> 123456
+          </span>
+        </h2>
       </div>
     </>
   );
