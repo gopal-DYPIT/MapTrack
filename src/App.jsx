@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom"; // Import BrowserRouter
 import LoginForm from "./pages/LoginForm";
 import SignUpForm from "./pages/SignUpForm";
 import Home from "./pages/Home";
@@ -29,24 +29,26 @@ function App() {
   };
 
   return (
-    <Routes>
-      <Route 
-        path="/" 
-        element={<Landing profiles={profiles} onDeleteProfile={handleDeleteProfile} />} 
-      />
-      <Route 
-        path="/signin" 
-        element={<LoginForm />} 
-      />
-      <Route 
-        path="/signup" 
-        element={<SignUpForm />} 
-      />
-      <Route 
-        path="/user" 
-        element={<Home onAddProfile={handleAddProfile} profiles={profiles} onDeleteProfile={handleDeleteProfile} onShowMap={handleShowMap}/>} 
-      />
-    </Routes>
+    <BrowserRouter basename="/MapTrack"> {/* Set the basename */}
+      <Routes>
+        <Route 
+          path="/" 
+          element={<Landing profiles={profiles} onDeleteProfile={handleDeleteProfile} />} 
+        />
+        <Route 
+          path="/signin" 
+          element={<LoginForm />} 
+        />
+        <Route 
+          path="/signup" 
+          element={<SignUpForm />} 
+        />
+        <Route 
+          path="/user" 
+          element={<Home onAddProfile={handleAddProfile} profiles={profiles} onDeleteProfile={handleDeleteProfile} onShowMap={handleShowMap}/>} 
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
